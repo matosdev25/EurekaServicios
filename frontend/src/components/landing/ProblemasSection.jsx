@@ -7,7 +7,7 @@ const ProblemasSection = () => {
     {
       title: 'Techo con goteras',
       description: 'Detectamos y reparamos filtraciones en techos de todo tipo de material.',
-      image: 'https://images.unsplash.com/photo-1632178220375-0b5f6b85ddaa?w=400&h=300&fit=crop',
+      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&q=80',
       whatsappText: 'Hola, tengo goteras en el techo y necesito una evaluación.',
     },
     {
