@@ -1,34 +1,107 @@
-.App-logo {
-    height: 40vmin;
-    pointer-events: none;
+/* Eureka Servicios - Landing Page Styles */
+
+/* Smooth scrolling for anchor links */
+html {
+  scroll-behavior: smooth;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-    .App-logo {
-        animation: App-logo-spin infinite 20s linear;
-    }
+/* Custom selection color */
+::selection {
+  background-color: #1A4D2E;
+  color: white;
 }
 
-.App-header {
-    background-color: #0f0f10;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white;
+/* Ensure images don't overflow */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
-.App-link {
-    color: #61dafb;
+/* Remove default focus outline and add custom */
+*:focus {
+  outline: none;
 }
 
-@keyframes App-logo-spin {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
+*:focus-visible {
+  outline: 2px solid #1A4D2E;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Animation for hover effects */
+@keyframes subtle-bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Smooth transitions for interactive elements */
+a, button {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Card hover animation */
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* WhatsApp button pulse animation */
+@keyframes pulse-green {
+  0% {
+    box-shadow: 0 0 0 0 rgba(26, 77, 46, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(26, 77, 46, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(26, 77, 46, 0);
+  }
+}
+
+.pulse-animation {
+  animation: pulse-green 2s infinite;
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Responsive text adjustments */
+@media (max-width: 640px) {
+  .hero-title {
+    font-size: 2.25rem;
+    line-height: 1.2;
+  }
+}
+
+/* Glass morphism effect for navbar */
+.glass-nav {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* Loading skeleton animation */
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
 }
