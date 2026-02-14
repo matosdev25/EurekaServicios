@@ -1,0 +1,135 @@
+{
+  "identity": {
+    "name": "Eureka Servicios",
+    "tone": "Trustworthy, Efficient, Premium, Calm",
+    "archetype": "Organic & Earthy (Archetype 1)",
+    "aesthetic": "Minimalist, Soft, Rounded, Nature-Inspired"
+  },
+  "typography": {
+    "headings": {
+      "family": "Outfit",
+      "weights": ["500", "600", "700"],
+      "letterSpacing": "tracking-tight"
+    },
+    "body": {
+      "family": "Inter",
+      "weights": ["400", "500"],
+      "letterSpacing": "tracking-normal"
+    },
+    "scale": {
+      "h1": "text-5xl md:text-6xl lg:text-7xl leading-[1.1]",
+      "h2": "text-3xl md:text-4xl lg:text-5xl leading-tight",
+      "h3": "text-2xl md:text-3xl font-semibold",
+      "p": "text-lg text-muted-foreground leading-relaxed"
+    }
+  },
+  "colors": {
+    "palette": {
+      "background": "#FDFCF8",
+      "background_alt": "#F2F2EB",
+      "primary": "#1A4D2E",
+      "primary_foreground": "#FFFFFF",
+      "secondary": "#E0E7D8",
+      "secondary_foreground": "#1A4D2E",
+      "accent": "#D4A373",
+      "text_main": "#2C332E",
+      "text_muted": "#5C6660",
+      "border": "#E5E7EB"
+    },
+    "tailwind_config_extension": {
+      "colors": {
+        "eureka": {
+          "bg": "#FDFCF8",
+          "cream": "#F2F2EB",
+          "green": {
+            "900": "#1A4D2E",
+            "800": "#255938",
+            "100": "#E0E7D8",
+            "50": "#F0F5ED"
+          }
+        }
+      }
+    }
+  },
+  "layout": {
+    "spacing": "Generous. Use p-12, p-16, p-24 for section padding.",
+    "container": "max-w-7xl mx-auto px-6",
+    "border_radius": "rounded-2xl or rounded-3xl",
+    "grid_strategy": "Bento Grid (Mode A) for Service Catalog. Asymmetrical layouts for Hero."
+  },
+  "components": {
+    "buttons": {
+      "primary": "bg-eureka-green-900 text-white hover:bg-eureka-green-800 rounded-full px-8 py-6 text-lg font-medium transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5",
+      "secondary": "border-2 border-eureka-green-900 text-eureka-green-900 bg-transparent hover:bg-eureka-green-50 rounded-full px-8 py-6 text-lg font-medium"
+    },
+    "cards": {
+      "style": "bg-white rounded-3xl p-8 shadow-[0_4px_20px_rgba(0,0,0,0.04)] border border-transparent hover:border-eureka-green-100 transition-colors",
+      "hover": "hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+    },
+    "icons": {
+      "library": "lucide-react",
+      "style": "stroke-1.5 w-6 h-6 text-eureka-green-900"
+    }
+  },
+  "sections": {
+    "header": {
+      "style": "sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-100",
+      "logo": "Text 'Eureka' in Outfit Bold, Green-900",
+      "nav": "Hidden on mobile, Flex on desktop. Links: text-sm font-medium text-gray-600 hover:text-green-900"
+    },
+    "hero": {
+      "layout": "Two column: Left Text, Right Masonry Collage",
+      "title": "Reparaciones del hogar,\nsin el estrés.",
+      "images": [
+        "https://images.unsplash.com/photo-1540104539488-92a51bbc0410",
+        "https://images.unsplash.com/photo-1523413555809-0fb1d4da238d",
+        "https://images.unsplash.com/photo-1769184618473-58c1f0e294f4"
+      ]
+    },
+    "services_bento": {
+      "grid": "grid-cols-1 md:grid-cols-3 gap-6",
+      "items": [
+        {"title": "Plomería", "col_span": "col-span-1"},
+        {"title": "Electricidad", "col_span": "col-span-1"},
+        {"title": "Pintura", "col_span": "col-span-1"},
+        {"title": "Instalaciones Generales", "col_span": "col-span-2"},
+        {"title": "Impermeabilización", "col_span": "col-span-1"}
+      ]
+    },
+    "team": {
+      "image": "https://images.unsplash.com/photo-1671718648167-6b209c182480"
+    },
+    "cta": {
+      "bg": "bg-gradient-to-br from-eureka-green-900 to-eureka-green-800 text-white rounded-3xl"
+    }
+  },
+  "image_urls": {
+    "hero_collage": [
+      "https://images.unsplash.com/photo-1540104539488-92a51bbc0410",
+      "https://images.unsplash.com/photo-1523413555809-0fb1d4da238d",
+      "https://images.unsplash.com/photo-1769184618473-58c1f0e294f4"
+    ],
+    "team_member": "https://images.unsplash.com/photo-1671718648167-6b209c182480",
+    "action_shot": "https://images.unsplash.com/photo-1461938337379-4b537cd2db74",
+    "background_texture": "https://www.transparenttextures.com/patterns/cubes.png"
+  },
+  "universal_guidelines": [
+    "Do NOT use gradients for text.",
+    "Ensure 3:1 contrast for large text and 4.5:1 for small text.",
+    "Use 'Outfit' font for all headings (h1-h3).",
+    "Use 'Inter' font for body text.",
+    "Buttons must be pill-shaped (rounded-full).",
+    "Cards must have generous internal padding (p-6 or p-8).",
+    "Avoid pure black (#000000). Use #1A4D2E (Deep Green) or #2C332E (Dark Grey) instead.",
+    "Interactive elements must have hover states (opacity change or lift)."
+  ],
+  "instructions_to_main_agent": [
+    "1. Update tailwind.config.js to include the 'eureka' color palette.",
+    "2. Install 'lucide-react' for icons if not present.",
+    "3. Create a 'Layout' component that handles the sticky header and footer.",
+    "4. Implement the Hero section using a Masonry or uneven grid for the images.",
+    "5. Use the provided Unsplash URLs for the respective sections.",
+    "6. Ensure all text is in Spanish as requested.",
+    "7. Add 'data-testid' to all buttons and inputs."
+  ]
+}
