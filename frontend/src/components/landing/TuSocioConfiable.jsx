@@ -23,7 +23,7 @@ const TuSocioConfiable = () => {
     <section 
       id="quienes-somos"
       data-testid="socio-confiable-section"
-      className="bg-[#F5F5EC] py-20 lg:py-28"
+      className="bg-[#FAFDEF] py-20 lg:py-28"
     >
       <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
@@ -32,14 +32,10 @@ const TuSocioConfiable = () => {
             {/* Badge */}
             <div 
               data-testid="about-badge"
-              className="inline-flex items-center gap-2 bg-[#FEF9E7] px-4 py-2 rounded-full"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F6F1C8] text-[#1A1A1A] text-sm font-semibold"
             >
               {/* Lightbulb Icon */}
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="12" cy="14" rx="6" ry="7" fill="#7C6B5A"/>
-                <ellipse cx="12" cy="5" rx="3" ry="3" fill="#FBBF24"/>
-                <rect x="10" y="19" width="4" height="3" rx="1" fill="#5C4E3D"/>
-              </svg>
+             <img src="/logo.png" alt="Eureka Servicios" className="w-5 h-5 object-contain" />
               <span className="text-[15px] font-medium text-[#2a2a2a]">
                 ¿Quiénes somos?
               </span>
@@ -100,30 +96,30 @@ const TuSocioConfiable = () => {
               />
             </div>
             
-            {/* Overlay Card */}
-            <div 
-              data-testid="overlay-card"
-              className="absolute bottom-6 left-6 right-6 lg:left-auto lg:right-6 lg:w-[280px] bg-white/95 backdrop-blur-sm rounded-2xl shadow-[0_8px_30px_rgba(0,0,0,0.12)] p-5"
-            >
-              <div className="flex items-center gap-3">
-                {/* Logo Icon */}
-                <div className="w-11 h-11 rounded-full bg-[#F5F5EC] flex items-center justify-center flex-shrink-0">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <ellipse cx="12" cy="14" rx="6" ry="7" fill="#7C6B5A"/>
-                    <ellipse cx="12" cy="5" rx="3" ry="3" fill="#FBBF24"/>
-                    <rect x="10" y="19" width="4" height="3" rx="1" fill="#5C4E3D"/>
-                  </svg>
-                </div>
-                <div>
-                  <p className="font-outfit font-bold text-[18px] text-[#1a1a1a]">
-                    Eureka!
-                  </p>
-                  <p className="text-[14px] text-[#6a6a6a]">
-                    Tu solución profesional
-                  </p>
-                </div>
-              </div>
-            </div>
+          {/* Overlay Card */}
+<div
+  data-testid="overlay-card"
+  className="absolute bottom-10 left-10 right-10 bg-white rounded-[18px] shadow-[0_16px_40px_rgba(0,0,0,0.12)] p-6"
+>
+  <div className="flex items-center gap-4">
+    {/* Logo */}
+    <img
+      src="/logo.png"
+      alt="Eureka Servicios"
+      className="w-10 h-10 object-contain flex-shrink-0"
+    />
+
+    <div>
+      <p className="font-outfit font-bold text-[18px] text-[#1a1a1a] leading-tight">
+        Eureka!
+      </p>
+      <p className="text-[15px] text-[#6a6a6a]">
+        Tu solución profesional
+      </p>
+    </div>
+  </div>
+</div>
+
           </div>
         </div>
       </div>

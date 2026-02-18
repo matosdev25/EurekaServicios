@@ -29,7 +29,7 @@ const Hero = () => {
   return (
     <section 
       data-testid="hero-section"
-      className="bg-[#E8EFD5] py-16 lg:py-20"
+      className="bg-[#F2F8D8] py-16 lg:py-20"
     >
       <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
@@ -57,7 +57,7 @@ const Hero = () => {
                 target="_blank"
                 rel="noopener noreferrer"
                 data-testid="hero-whatsapp-btn"
-                className="inline-flex items-center gap-2.5 bg-[#1A4D2E] hover:bg-[#255938] text-white text-[16px] font-semibold px-7 py-4 rounded-xl shadow-md hover:shadow-lg transition-all"
+                className="inline-flex items-center gap-2 bg-[#0B7A1E] text-white font-semibold px-8 py-4 rounded-full hover:bg-[#0A6C1A] transition-colors"
               >
                 <MessageCircle className="w-5 h-5" />
                 Cotizar por WhatsApp
@@ -66,7 +66,7 @@ const Hero = () => {
               <button
                 onClick={scrollToServices}
                 data-testid="hero-services-btn"
-                className="inline-flex items-center gap-2 border-2 border-[#3B9B7A] text-[#3B9B7A] hover:bg-[#3B9B7A] hover:text-white text-[16px] font-semibold px-7 py-[14px] rounded-xl transition-all"
+                className="inline-flex items-center justify-center bg-white text-[#2B7A78] font-semibold px-8 py-4 rounded-full border-2 border-[#2B7A78] hover:bg-[#F6FFFB] transition-colors"
               >
                 Ver servicios
               </button>
@@ -82,7 +82,7 @@ const Hero = () => {
                   key={index}
                   className="flex items-center gap-2"
                 >
-                  <CheckCircle className="w-5 h-5 text-[#1A4D2E] fill-[#E0E7D8]" />
+                  <CheckCircle className="text-[#1A4D2E] opacity-80" />
                   <span className="text-[15px] font-medium text-[#3a3a3a]">{benefit.text}</span>
                 </div>
               ))}

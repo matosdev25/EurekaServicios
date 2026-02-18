@@ -14,7 +14,7 @@ const PersonalSection = () => {
     <section 
       id="servicios"
       data-testid="personal-section"
-      className="bg-white py-20 md:py-28"
+      className="bg-[#f5fbd4] py-20 md:py-28"
     >
       <div className="max-w-7xl mx-auto px-6">
         {/* Title */}
@@ -39,8 +39,8 @@ const PersonalSection = () => {
               className="bg-eureka-cream rounded-3xl p-6 md:p-8 hover:bg-eureka-green-50 hover:shadow-md transition-all duration-300 group cursor-pointer"
             >
               <div className="space-y-4">
-                <div className="w-14 h-14 rounded-2xl bg-eureka-green-100 group-hover:bg-eureka-green-900 flex items-center justify-center transition-colors">
-                  <service.icon className="w-7 h-7 text-eureka-green-900 group-hover:text-white transition-colors" />
+  <div className="w-14 h-14 rounded-2xl bg-[#52b4c3]/15 group-hover:bg-[#52b4c3] flex items-center justify-center transition-colors">
+    <service.icon className="w-7 h-7 text-[#52b4c3] group-hover:text-white transition-colors" />
                 </div>
                 <div>
                   <h3 className="font-outfit font-semibold text-lg text-eureka-text">

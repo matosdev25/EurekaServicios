@@ -119,3 +119,12 @@ code {
         border-bottom-color: inherit;
     }
 }
+#emergent-badge {
+  display: none !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+a[href*="app.emergent.sh"] {
+  display: none !important;
+}
+

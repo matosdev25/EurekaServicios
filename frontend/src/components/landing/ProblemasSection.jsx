@@ -7,19 +7,19 @@ const ProblemasSection = () => {
     {
       title: 'Techo con goteras',
       description: 'Detectamos y reparamos filtraciones en techos de todo tipo de material.',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop&q=80',
+      image: '/problems/techo-goteras.png',
       whatsappText: 'Hola, tengo goteras en el techo y necesito una evaluación.',
     },
     {
       title: 'Agua dentro de la pared',
       description: 'Identificamos el origen de la humedad y solucionamos el problema de raíz.',
-      image: 'https://images.unsplash.com/photo-1534237710431-e2fc698436d0?w=400&h=300&fit=crop',
+      image: '/problems/agua-pared.png',
       whatsappText: 'Hola, tengo humedad en las paredes y necesito diagnóstico.',
     },
     {
       title: 'Grietas por humedad o temblores',
       description: 'Reparamos grietas estructurales y cosméticas con técnicas profesionales.',
-      image: 'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop',
+      image: '/problems/grietas.png',
       whatsappText: 'Hola, tengo grietas en mi propiedad y necesito una evaluación.',
     },
   ];
@@ -27,7 +27,7 @@ const ProblemasSection = () => {
   return (
     <section 
       data-testid="problemas-section"
-      className="bg-eureka-cream py-20 md:py-28"
+      className="bg-[#fafdef] py-20 md:py-28"
     >
       <div className="max-w-7xl mx-auto px-6">
         {/* Title */}
@@ -50,13 +50,15 @@ const ProblemasSection = () => {
               className="bg-white rounded-3xl overflow-hidden shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-lg hover:-translate-y-1 transition-all duration-300 group"
             >
               {/* Image */}
-              <div className="relative h-48 overflow-hidden">
-                <img
-                  src={problem.image}
-                  alt={problem.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                />
-              </div>
+              <div className="w-full h-[190px] overflow-hidden rounded-t-3xl bg-gray-100">
+  <img
+    src={problem.image}
+    alt={problem.title}
+    className="w-full h-full object-cover"
+    loading="lazy"
+  />
+</div>
+
               
               {/* Content */}
               <div className="p-6 space-y-4">

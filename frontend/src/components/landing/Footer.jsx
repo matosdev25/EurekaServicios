@@ -1,6 +1,7 @@
 import { MessageCircle, MapPin, Instagram } from 'lucide-react';
 
 const WHATSAPP_NUMBER = '50760001234';
+const BRAND_BLUE = '#52b4c3';
 
 const Footer = () => {
   const quickLinks = [
@@ -11,37 +12,30 @@ const Footer = () => {
 
   const scrollToSection = (href) => {
     const element = document.querySelector(href);
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-    }
+    if (element) element.scrollIntoView({ behavior: 'smooth' });
   };
 
   return (
-    <footer 
-      data-testid="footer"
-      className="bg-eureka-text py-16"
-    >
+    <footer data-testid="footer" className="bg-[#F7F6F0] py-16">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
           {/* Logo & Description */}
           <div className="lg:col-span-1">
-            <div className="flex items-center gap-2 mb-4">
-              <span className="font-outfit text-2xl font-bold text-white">
-                Eureka
-              </span>
-              <span className="font-outfit text-lg font-medium text-eureka-muted">
-                Servicios
+            <div className="flex items-center gap-3 mb-5">
+              <img src="/logo.png" alt="Eureka Servicios" className="w-9 h-9 object-contain" />
+              <span className="font-outfit text-xl font-semibold text-[#1a1a1a]">
+                Eureka Servicios
               </span>
             </div>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              Soluciones profesionales para tu hogar y negocio en Ciudad de Panamá. 
-              Calidad, rapidez y garantía en cada trabajo.
+
+            <p className="text-[#6a6a6a] text-[16px] leading-relaxed max-w-[280px]">
+              Soluciones profesionales para tu hogar y negocio en Ciudad de Panamá
             </p>
           </div>
 
           {/* Quick Links */}
           <div>
-            <h4 className="font-outfit font-semibold text-white mb-4">
+            <h4 className="font-outfit font-semibold text-[#1a1a1a] mb-4">
               Enlaces rápidos
             </h4>
             <ul className="space-y-3">
@@ -50,7 +44,7 @@ const Footer = () => {
                   <button
                     onClick={() => scrollToSection(link.href)}
                     data-testid={`footer-link-${index}`}
-                    className="text-gray-400 hover:text-white transition-colors text-sm"
+                    className="text-[#6a6a6a] hover:text-[#1a1a1a] transition-colors text-[16px]"
                   >
                     {link.name}
                   </button>
@@ -61,34 +55,35 @@ const Footer = () => {
 
           {/* Contact */}
           <div>
-            <h4 className="font-outfit font-semibold text-white mb-4">
+            <h4 className="font-outfit font-semibold text-[#1a1a1a] mb-4">
               Contacto
             </h4>
             <ul className="space-y-3">
+              <li>
+                <div className="text-[#6a6a6a] text-[16px]">
+                  Atendemos Ciudad de Panamá
+                </div>
+              </li>
+
               <li>
                 <a
                   href={`https://wa.me/${WHATSAPP_NUMBER}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   data-testid="footer-whatsapp"
-                  className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm"
+                  className="inline-flex items-center gap-2 text-[16px] font-medium transition-colors"
+                  style={{ color: BRAND_BLUE }}
                 >
-                  <MessageCircle className="w-4 h-4" />
-                  +507 6000-1234
+                  <MessageCircle className="w-5 h-5" />
+                  WhatsApp
                 </a>
-              </li>
-              <li>
-                <div className="flex items-center gap-2 text-gray-400 text-sm">
-                  <MapPin className="w-4 h-4" />
-                  Ciudad de Panamá
-                </div>
               </li>
             </ul>
           </div>
 
           {/* Social */}
           <div>
-            <h4 className="font-outfit font-semibold text-white mb-4">
+            <h4 className="font-outfit font-semibold text-[#1a1a1a] mb-4">
               Síguenos
             </h4>
             <a
@@ -96,17 +91,17 @@ const Footer = () => {
               target="_blank"
               rel="noopener noreferrer"
               data-testid="footer-instagram"
-              className="inline-flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm"
+              className="inline-flex items-center gap-2 text-[#6a6a6a] hover:text-[#1a1a1a] transition-colors text-[16px]"
             >
               <Instagram className="w-5 h-5" />
-              @eurekaservicios
+              Instagram
             </a>
           </div>
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-gray-700 pt-8">
-          <p className="text-center text-gray-500 text-sm">
+        <div className="border-t border-black/10 pt-10">
+          <p className="text-center text-[#9a9a9a] text-[14px]">
             © {new Date().getFullYear()} Eureka Servicios. Todos los derechos reservados.
           </p>
         </div>

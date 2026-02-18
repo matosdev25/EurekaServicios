@@ -35,19 +35,15 @@ const Navbar = () => {
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
           >
-            {/* Lightbulb Icon */}
-            <div className="w-8 h-8 flex items-center justify-center">
-              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                {/* Bulb body */}
-                <ellipse cx="16" cy="18" rx="9" ry="10" fill="#7C6B5A"/>
-                {/* Light glow */}
-                <ellipse cx="16" cy="5" rx="4" ry="4" fill="#FBBF24"/>
-                {/* Base */}
-                <rect x="12" y="25" width="8" height="4" rx="1" fill="#5C4E3D"/>
-                {/* Highlight on bulb */}
-                <ellipse cx="13" cy="16" rx="2" ry="3" fill="#8B7A69" opacity="0.6"/>
-              </svg>
-            </div>
+            {/* Logo */}
+<div className="w-8 h-8 flex items-center justify-center">
+  <img
+    src="/logo.png"
+    alt="Eureka Servicios"
+    className="h-8 w-8 object-contain"
+  />
+</div>
+
             <span className="font-outfit text-[18px] font-semibold text-[#1a1a1a] tracking-tight">
               Eureka Servicios
             </span>
@@ -68,7 +64,7 @@ const Navbar = () => {
             <button
               data-testid="nav-link-contactanos"
               onClick={() => scrollToSection('#contacto')}
-              className="bg-[#1A4D2E] text-white text-[15px] font-medium px-6 py-2.5 rounded-lg hover:bg-[#255938] transition-colors"
+              className="bg-[#0B7A1E] text-white text-[15px] font-semibold px-7 py-3 rounded-full hover:bg-[#0A6C1A] transition-colors"
             >
               Contáctanos
             </button>
@@ -109,7 +105,7 @@ const Navbar = () => {
               <button
                 data-testid="mobile-nav-contactanos"
                 onClick={() => scrollToSection('#contacto')}
-                className="text-left text-[15px] font-medium py-3 px-4 rounded-xl bg-[#1A4D2E] text-white mt-2"
+                className="text-left text-[15px] font-semibold py-3 px-4 rounded-full bg-[#0B7A1E] text-white mt-2 hover:bg-[#0A6C1A] transition-colors"
               >
                 Contáctanos
               </button>

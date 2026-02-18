@@ -12,7 +12,7 @@ const CTASection = () => {
       className="py-20 md:py-28"
     >
       <div className="max-w-7xl mx-auto px-6">
-        <div className="bg-gradient-to-br from-eureka-green-900 to-eureka-green-800 rounded-3xl p-10 md:p-16 text-center">
+        <div className="bg-[#21a1ae] rounded-3xl p-10 md:p-16 text-center">
           <h2 
             data-testid="cta-title"
             className="font-outfit text-3xl md:text-4xl lg:text-5xl font-bold text-white leading-tight tracking-tight mb-6"
@@ -25,18 +25,19 @@ const CTASection = () => {
           </p>
 
           <a
-            href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            data-testid="cta-whatsapp-btn"
-          >
-            <Button 
-              className="bg-white text-eureka-green-900 hover:bg-eureka-cream rounded-full px-10 py-6 text-lg font-semibold shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition-all flex items-center gap-3 mx-auto"
-            >
-              <MessageCircle className="w-5 h-5" />
-              Hablar por WhatsApp
-            </Button>
-          </a>
+  href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  data-testid="cta-whatsapp-btn"
+>
+  <Button
+    className="group bg-white text-[#52b4c3] hover:bg-[#F5E96A] hover:text-[#1A4D2E] rounded-full px-10 py-6 text-lg font-semibold shadow-xl hover:shadow-2xl hover:-translate-y-0.5 transition-all flex items-center gap-3 mx-auto"
+  >
+    <MessageCircle className="w-5 h-5 text-[#52b4c3] transition-colors group-hover:text-[#1A4D2E]" />
+    Hablar por WhatsApp
+  </Button>
+</a>
+
         </div>
       </div>
     </section>

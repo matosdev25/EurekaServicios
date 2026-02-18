@@ -47,7 +47,7 @@ const ReviewsSection = () => {
   return (
     <section 
       data-testid="reviews-section"
-      className="bg-eureka-bg py-20 md:py-28"
+      className="bg-[#f5fbd4] py-20 md:py-28"
     >
       <div className="max-w-7xl mx-auto px-6">
         {/* Title */}
@@ -108,8 +108,10 @@ const ReviewsSection = () => {
             data-testid="reviews-cta-btn"
           >
             <Button 
-              className="bg-eureka-green-900 hover:bg-eureka-green-800 text-white rounded-full px-10 py-6 text-lg font-medium shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
+            className="inline-flex items-center justify-center gap-2 bg-[#0B7A1E] text-white font-semibold px-10 py-4 rounded-full hover:bg-[#0A6C1A] transition-colors"
             >
+              <MessageCircle className="w-5 h-5" />
+
               Quiero una cotización
             </Button>
           </a>
