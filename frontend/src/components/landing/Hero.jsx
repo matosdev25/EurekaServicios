@@ -11,11 +11,11 @@ const Hero = () => {
   ];
 
   const heroImages = [
-    // Large vertical image (left) - worker with tools
-    'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=600&h=700&fit=crop&q=80',
+    // Large vertical image (left) - worker with green power drill
+    'https://images.unsplash.com/photo-1644308392725-69b682ae63a4?w=600&h=700&fit=crop&q=80',
     // Top right image - electrician working
     'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&h=320&fit=crop&q=80',
-    // Bottom right image - plumbing work
+    // Bottom right image - plumbing/pipe work
     'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=320&fit=crop&q=80',
   ];
 
