@@ -37,10 +37,15 @@ const Navbar = () => {
           >
             {/* Lightbulb Icon */}
             <div className="w-8 h-8 flex items-center justify-center">
-              <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="14" cy="18" r="8" fill="#8B7355"/>
-                <ellipse cx="14" cy="6" rx="4" ry="4" fill="#FBBF24"/>
-                <path d="M12 18h4v4a2 2 0 01-2 2 2 2 0 01-2-2v-4z" fill="#8B7355"/>
+              <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                {/* Bulb body */}
+                <ellipse cx="16" cy="18" rx="9" ry="10" fill="#7C6B5A"/>
+                {/* Light glow */}
+                <ellipse cx="16" cy="5" rx="4" ry="4" fill="#FBBF24"/>
+                {/* Base */}
+                <rect x="12" y="25" width="8" height="4" rx="1" fill="#5C4E3D"/>
+                {/* Highlight on bulb */}
+                <ellipse cx="13" cy="16" rx="2" ry="3" fill="#8B7A69" opacity="0.6"/>
               </svg>
             </div>
             <span className="font-outfit text-[18px] font-semibold text-[#1a1a1a] tracking-tight">
