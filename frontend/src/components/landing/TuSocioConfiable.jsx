@@ -35,7 +35,7 @@ const TuSocioConfiable = () => {
               className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-[#F6F1C8] text-[#1A1A1A] text-sm font-semibold"
             >
               {/* Lightbulb Icon */}
-             <img src="/logo.png" alt="Eureka Servicios" className="w-5 h-5 object-contain" />
+             <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Eureka Servicios" className="w-5 h-5 object-contain" />
               <span className="text-[15px] font-medium text-[#2a2a2a]">
                 ¿Quiénes somos?
               </span>
@@ -104,7 +104,7 @@ const TuSocioConfiable = () => {
   <div className="flex items-center gap-4">
     {/* Logo */}
     <img
-      src="/logo.png"
+      src={`${process.env.PUBLIC_URL}/logo.png`}
       alt="Eureka Servicios"
       className="w-10 h-10 object-contain flex-shrink-0"
     />
