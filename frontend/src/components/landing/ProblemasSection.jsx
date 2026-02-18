@@ -7,19 +7,19 @@ const ProblemasSection = () => {
     {
       title: 'Techo con goteras',
       description: 'Detectamos y reparamos filtraciones en techos de todo tipo de material.',
-      image: '/problems/techo-goteras.png',
+      image: `${process.env.PUBLIC_URL}/problems/techo-goteras.png`,
       whatsappText: 'Hola, tengo goteras en el techo y necesito una evaluación.',
     },
     {
       title: 'Agua dentro de la pared',
       description: 'Identificamos el origen de la humedad y solucionamos el problema de raíz.',
-      image: '/problems/agua-pared.png',
+      image: `${process.env.PUBLIC_URL}/problems/agua-pared.png`,
       whatsappText: 'Hola, tengo humedad en las paredes y necesito diagnóstico.',
     },
     {
       title: 'Grietas por humedad o temblores',
       description: 'Reparamos grietas estructurales y cosméticas con técnicas profesionales.',
-      image: '/problems/grietas.png',
+      image: `${process.env.PUBLIC_URL}/problems/grietas.png`,
       whatsappText: 'Hola, tengo grietas en mi propiedad y necesito una evaluación.',
     },
   ];

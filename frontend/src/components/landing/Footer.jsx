@@ -22,7 +22,7 @@ const Footer = () => {
           {/* Logo & Description */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-3 mb-5">
-              <img src="/logo.png" alt="Eureka Servicios" className="w-9 h-9 object-contain" />
+              <img src={`${process.env.PUBLIC_URL}/logo.png`} alt="Eureka Servicios" className="w-9 h-9 object-contain" />
               <span className="font-outfit text-xl font-semibold text-[#1a1a1a]">
                 Eureka Servicios
               </span>

@@ -38,7 +38,7 @@ const Navbar = () => {
             {/* Logo */}
 <div className="w-8 h-8 flex items-center justify-center">
   <img
-    src="/logo.png"
+    src={`${process.env.PUBLIC_URL}/logo.png`}
     alt="Eureka Servicios"
     className="h-8 w-8 object-contain"
   />
