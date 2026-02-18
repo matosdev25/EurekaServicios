@@ -1,75 +1,89 @@
-import { MessageCircle, Search, Wrench, Settings } from 'lucide-react';
-import { Button } from '../ui/button';
+import { MessageCircle, CheckCircle } from 'lucide-react';
 
 const WHATSAPP_NUMBER = '50760001234';
 const WHATSAPP_MESSAGE = encodeURIComponent('Hola, me gustaría cotizar un servicio de reparación.');
 
 const Hero = () => {
   const benefits = [
-    { icon: Search, text: 'Diagnóstico' },
-    { icon: Wrench, text: 'Reparación' },
-    { icon: Settings, text: 'Mantenimiento' },
+    { text: 'Diagnóstico' },
+    { text: 'Reparación' },
+    { text: 'Mantenimiento' },
   ];
 
   const heroImages = [
-    'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=400&h=300&fit=crop',
-    'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=400&h=300&fit=crop',
-    'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=400&h=300&fit=crop',
-    'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=400&h=300&fit=crop',
+    // Large vertical image (left)
+    'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=500&h=600&fit=crop&q=80',
+    // Top right image
+    'https://images.unsplash.com/photo-1621905251189-08b45d6a269e?w=350&h=280&fit=crop&q=80',
+    // Bottom right image
+    'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=350&h=280&fit=crop&q=80',
   ];
+
+  const scrollToServices = () => {
+    const element = document.querySelector('#servicios');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <section 
       data-testid="hero-section"
-      className="bg-eureka-cream py-16 md:py-24"
+      className="bg-[#E8EFD5] py-16 lg:py-20"
     >
-      <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+      <div className="max-w-[1200px] mx-auto px-6 lg:px-8">
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Left Column - Text */}
-          <div className="space-y-8">
+          <div className="space-y-6 lg:space-y-8">
             <h1 
               data-testid="hero-title"
-              className="font-outfit text-4xl sm:text-5xl lg:text-6xl font-bold text-eureka-text leading-tight tracking-tight"
+              className="font-outfit text-[42px] sm:text-[48px] lg:text-[52px] font-bold text-[#1a1a1a] leading-[1.1] tracking-tight"
             >
               Soluciones rápidas y profesionales para tu hogar y negocio
             </h1>
             
             <p 
               data-testid="hero-subtitle"
-              className="text-lg text-eureka-muted leading-relaxed max-w-lg"
+              className="text-[18px] text-[#5c5c5c] leading-relaxed max-w-[480px]"
             >
               Reparamos filtraciones, grietas y problemas técnicos. 
               Atención en Ciudad de Panamá.
             </p>
 
-            <a
-              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              data-testid="hero-whatsapp-btn"
-            >
-              <Button 
-                className="bg-eureka-green-900 hover:bg-eureka-green-800 text-white rounded-full px-8 py-6 text-lg font-medium shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all flex items-center gap-3"
+            {/* Buttons Row */}
+            <div className="flex flex-wrap items-center gap-4 pt-2">
+              <a
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${WHATSAPP_MESSAGE}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                data-testid="hero-whatsapp-btn"
+                className="inline-flex items-center gap-2.5 bg-[#1A4D2E] hover:bg-[#255938] text-white text-[16px] font-semibold px-7 py-4 rounded-xl shadow-md hover:shadow-lg transition-all"
               >
                 <MessageCircle className="w-5 h-5" />
                 Cotizar por WhatsApp
-              </Button>
-            </a>
+              </a>
+              
+              <button
+                onClick={scrollToServices}
+                data-testid="hero-services-btn"
+                className="inline-flex items-center gap-2 border-2 border-[#3B9B7A] text-[#3B9B7A] hover:bg-[#3B9B7A] hover:text-white text-[16px] font-semibold px-7 py-[14px] rounded-xl transition-all"
+              >
+                Ver servicios
+              </button>
+            </div>
 
-            {/* Benefits */}
+            {/* Benefits Row */}
             <div 
               data-testid="hero-benefits"
-              className="flex flex-wrap gap-6 pt-4"
+              className="flex flex-wrap items-center gap-6 pt-4"
             >
               {benefits.map((benefit, index) => (
                 <div 
                   key={index}
-                  className="flex items-center gap-2 text-eureka-text"
+                  className="flex items-center gap-2"
                 >
-                  <div className="w-10 h-10 rounded-full bg-eureka-green-100 flex items-center justify-center">
-                    <benefit.icon className="w-5 h-5 text-eureka-green-900" />
-                  </div>
-                  <span className="font-medium">{benefit.text}</span>
+                  <CheckCircle className="w-5 h-5 text-[#1A4D2E] fill-[#E0E7D8]" />
+                  <span className="text-[15px] font-medium text-[#3a3a3a]">{benefit.text}</span>
                 </div>
               ))}
             </div>
@@ -78,22 +92,37 @@ const Hero = () => {
           {/* Right Column - Image Collage */}
           <div 
             data-testid="hero-images"
-            className="grid grid-cols-2 gap-4"
+            className="flex gap-4 h-[420px] lg:h-[500px]"
           >
-            {heroImages.map((img, index) => (
-              <div 
-                key={index}
-                className={`rounded-2xl overflow-hidden shadow-md ${
-                  index === 0 ? 'row-span-1' : ''
-                } ${index === 1 ? 'mt-8' : ''} ${index === 3 ? '-mt-8' : ''}`}
-              >
+            {/* Large Vertical Image (Left) */}
+            <div className="flex-1 rounded-[24px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
+              <img
+                src={heroImages[0]}
+                alt="Profesional realizando reparación"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            
+            {/* Right Column - 2 Stacked Images */}
+            <div className="flex flex-col gap-4 w-[42%]">
+              {/* Top Right Image */}
+              <div className="flex-1 rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
                 <img
-                  src={img}
-                  alt={`Servicio de reparación ${index + 1}`}
-                  className="w-full h-48 md:h-56 object-cover hover:scale-105 transition-transform duration-500"
+                  src={heroImages[1]}
+                  alt="Herramientas de trabajo"
+                  className="w-full h-full object-cover"
                 />
               </div>
-            ))}
+              
+              {/* Bottom Right Image */}
+              <div className="flex-1 rounded-[20px] overflow-hidden shadow-[0_8px_30px_rgba(0,0,0,0.12)]">
+                <img
+                  src={heroImages[2]}
+                  alt="Trabajo de fontanería"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
           </div>
         </div>
       </div>
