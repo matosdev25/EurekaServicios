@@ -1,6 +1,6 @@
 import { ArrowRight } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '50760001234';
+const WHATSAPP_NUMBER = '50767059547';
 
 const ProblemasSection = () => {
   const problems = [

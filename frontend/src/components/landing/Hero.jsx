@@ -1,6 +1,6 @@
 import { MessageCircle, CheckCircle } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '50760001234';
+const WHATSAPP_NUMBER = '50767059547';
 const WHATSAPP_MESSAGE = encodeURIComponent('Hola, me gustaría cotizar un servicio de reparación.');
 
 const Hero = () => {
@@ -46,8 +46,8 @@ const Hero = () => {
               data-testid="hero-subtitle"
               className="text-[18px] text-[#5c5c5c] leading-relaxed max-w-[480px]"
             >
-              Reparamos filtraciones, grietas y problemas técnicos. 
-              Atención en Ciudad de Panamá.
+              Reparamos filtraciones, grietas y problemas estructurales. 
+              Atención en Ciudad de Panamá, Colón, playas y sus alrededores.
             </p>
 
             {/* Buttons Row */}

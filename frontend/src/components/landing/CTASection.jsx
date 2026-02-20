@@ -1,7 +1,7 @@
 import { MessageCircle } from 'lucide-react';
 import { Button } from '../ui/button';
 
-const WHATSAPP_NUMBER = '50760001234';
+const WHATSAPP_NUMBER = '50767059547';
 const WHATSAPP_MESSAGE = encodeURIComponent('Hola, estoy listo para empezar mi proyecto. Me gustaría una cotización personalizada.');
 
 const CTASection = () => {

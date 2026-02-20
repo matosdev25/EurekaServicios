@@ -1,6 +1,6 @@
 import { MessageCircle, MapPin, Instagram } from 'lucide-react';
 
-const WHATSAPP_NUMBER = '50760001234';
+const WHATSAPP_NUMBER = '50767059547';
 const BRAND_BLUE = '#52b4c3';
 
 const Footer = () => {
@@ -61,7 +61,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li>
                 <div className="text-[#6a6a6a] text-[16px]">
-                  Atendemos Ciudad de Panamá
+                  Atendemos Ciudad de Panamá, Colón, playas y alrededores. 
                 </div>
               </li>
 
