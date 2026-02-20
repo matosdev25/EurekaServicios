@@ -87,7 +87,7 @@ const Footer = () => {
               Síguenos
             </h4>
             <a
-              href="https://instagram.com/eurekaservicios"
+              href="https://instagram.com/eureka_servicios"
               target="_blank"
               rel="noopener noreferrer"
               data-testid="footer-instagram"
