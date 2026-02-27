@@ -1,7 +1,7 @@
 import { MessageCircle, Droplet, Home, Umbrella, Waves, Building, Search, HelpCircle } from 'lucide-react';
 import { Button } from '../ui/button';
 import { Description } from '@radix-ui/react-dialog';
-const WHATSAPP_NUMBER = '50760001234';
+const WHATSAPP_NUMBER = '50767059547';
 
 const BRAND_BLUE = '#52b4c3';
 const WHATSAPP_GREEN = '#0B7A1E';
